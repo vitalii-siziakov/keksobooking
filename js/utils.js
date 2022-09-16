@@ -25,14 +25,16 @@ function checkSequence(min, max) {
   return true
 }
 
+function getRandomPositiveFloat(min, max, digits) {
+  if (checkSequence(min, max)) {
+    return getRandomFloat(min, max, digits)
+  }
+}
+
 function getRandomPositiveInteger(min, max) {
   if (checkSequence(min, max)) {
     return getRandomInteger(min, max)
   }
 }
 
-function getRandomPositiveFloat(min, max, digits) {
-  if (checkSequence(min, max)) {
-    return getRandomFloat(min, max, digits)
-  }
-}
+export { getRandomPositiveFloat, getRandomPositiveInteger }
