@@ -37,4 +37,27 @@ function getRandomPositiveInteger(min, max) {
   }
 }
 
-export { getRandomPositiveFloat, getRandomPositiveInteger };
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+function copy(array) {
+  return array.slice();
+}
+
+function isEmpty(element) {
+  let empty = true;
+  let checkedValue = '';
+
+  if (typeof element === 'string' || Array.isArray(element)) {
+    checkedValue = element.length;
+  } else {
+    checkedValue = Object.keys(element).length;
+  }
+
+  checkedValue === 0 ? (empty = true) : (empty = false);
+
+  return empty;
+}
+
+export { getRandomPositiveFloat, getRandomPositiveInteger, shuffle, copy };
