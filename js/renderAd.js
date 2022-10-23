@@ -189,6 +189,7 @@ function createCard(advert) {
   cardAdvert.forEach((item) => {
     const node = card.querySelector(item.selector);
     const nodeValueEmptyStatus = isEmpty(item.value);
+    
     if (nodeValueEmptyStatus) {
       node.style.display = 'none';
     }
