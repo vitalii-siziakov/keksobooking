@@ -49,4 +49,4 @@ function createCapacityText(rooms, guests) {
   return `${createRoomsText(rooms)} для ${createGuestsText(guests)}`;
 }
 
-export { createCapacityText };
+export { createCapacityText, createGuestsText };

@@ -60,4 +60,14 @@ function isEmpty(element) {
   return empty;
 }
 
-export { getRandomPositiveFloat, getRandomPositiveInteger, shuffle, copy };
+function modifyElementAttribute(element, functionName, ...args) {
+  element[functionName](...args);
+}
+
+function modifyElementsAttributes(elements, functionName, ...args) {
+  for (const element of elements) {
+    modifyElementAttribute(element, functionName, ...args);
+  }
+}
+
+export { getRandomPositiveFloat, getRandomPositiveInteger, shuffle, copy, modifyElementAttribute, modifyElementsAttributes };
